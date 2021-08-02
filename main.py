@@ -1,6 +1,5 @@
 from typing import List
 from matplotlib import pyplot as plt
-import sys
 
 def collatz(n: int) -> List[int]:
     if n < 1:
@@ -21,10 +20,9 @@ def irange(count: int, step: int = 1) -> range:
     return range(1, count + 1, step)
 
 def main():
-    for i in irange(20):
+    for i in irange(500):
         plt.plot(collatz(i), '-o')
     plt.show()
 
 if __name__ == '__main__':
-    sys.setrecursionlimit(2000)
     main()
